@@ -28,8 +28,11 @@ public class UserService {
         User userFromDB = userRepository.findByName(user.getName());
 
         if (userFromDB != null) {
+            userFromDB.setUsername(user.getUsername());
+            userFromDB.setPassword(user.getPassword());
             userFromDB.setName(user.getName());
             userFromDB.setSurname(user.getSurname());
+            userFromDB.setRoles(user.getRoles());
 
             userRepository.save(userFromDB);
 

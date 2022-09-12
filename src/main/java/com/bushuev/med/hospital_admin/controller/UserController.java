@@ -72,12 +72,12 @@ public class UserController {
         return "redirect:/allUsers";
     }
 
-    @PostMapping("login")
-    public String login(User user){
-
-
-        return "main";
-    }
+//    @PostMapping("login")
+//    public String login(User user){
+//
+//
+//        return "main";
+//    }
 
 
 }

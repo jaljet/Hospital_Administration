@@ -10,13 +10,13 @@
         <th>ID</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>Role</th>
+        <th>Roles</th>
     </tr>
     <tr th:each="user : ${allUsers}">
         <td class="align-middle" th:text="${user.id}"></td>
         <td class="align-middle" th:text="${user.name}"></td>
         <td class="align-middle" th:text="${user.surname}"></td>
-        <td class="align-middle" th:text="${user.getRole()}"></td>
+        <td class="align-middle" th:text="${user.getRoles()}"></td>
         <div>
             <td><a th:href="@{updateUser/{id}(id=${user.id})}">Edit</a></td>
             <td><a th:href="@{deleteUser/{id}(id=${user.id})}">Delete</a></td>
@@ -25,6 +25,8 @@
 </table>
 
 <p><a href="/createUser">Create user</a></p>
+
+<p><a href="/main">Back to the Main page</a></p>
 
 
 </body>

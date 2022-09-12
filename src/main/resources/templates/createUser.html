@@ -7,10 +7,15 @@
 <body>
 <h2>Create user</h2>
 <form action="#" th:action="@{/createUser}" th:object="${user}" method="post">
+    <p>Username: <input type="text" th:field="*{username}"/></p>
+    <p>Password: <input type="text" th:field="*{password}"/></p>
     <p>Name: <input type="text" th:field="*{name}"/></p>
     <p>Surname: <input type="text" th:field="*{surname}"/></p>
+    <p>Roles: <input type="text" th:field="*{roles}"/></p>
     <p><input type="submit" value="Submit"/> <input type="reset" value="Reset"/></p>
 </form>
+
+<p><a href="/allUsers">Back to the UserList</a></p>
 
 </body>
 </html>
