@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Main</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<br>
+<br>
+<div>
+    <form method="get" action="/allUsers" class="form-inline">
+        <button type="submit">Show All Users</button>
+    </form>
+</div>
+<br>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+</body>
+</html>
